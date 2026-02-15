@@ -51,11 +51,11 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg-primary)]/80 backdrop-blur-xl">
+    <nav aria-label="Main navigation" className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg-primary)]/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5">
-          <Image src="/logo.png" alt="SoltixDB" width={32} height={32} className="rounded-lg" />
+        <a href="#" className="flex items-center gap-2.5" aria-label="SoltixDB Home">
+          <Image src="/logo.png" alt="SoltixDB logo" width={32} height={32} className="rounded-lg" />
           <span className="text-lg font-bold tracking-tight">Soltix</span>
         </a>
 

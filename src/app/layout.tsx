@@ -3,27 +3,77 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Soltix — Distributed Time-Series Database",
-  description:
-    "A high-performance distributed time-series database built with Go. Pre-computed aggregation, columnar storage, and sub-100ms queries for IoT, industrial monitoring, and beyond.",
-  keywords: [
-    "time-series database",
-    "distributed database",
-    "IoT",
-    "industrial monitoring",
-    "sensor data",
-    "Go",
-    "TSDB",
-    "open source",
-  ],
-  openGraph: {
-    title: "Soltix — Distributed Time-Series Database",
-    description:
-      "High-performance distributed time-series database with pre-computed aggregation and columnar storage.",
-    url: "https://soltixdb.github.io",
-    siteName: "Soltix",
-    type: "website",
+  metadataBase: new URL("https://soltixdb.com"),
+  title: {
+    default: "SoltixDB — Time-Series Database Built for Solar Energy",
+    template: "%s | SoltixDB",
   },
+  description:
+    "Purpose-built TSDB for solar energy monitoring. Pre-computed aggregation across 4 levels, adaptive compression (Gorilla, Delta, Dictionary, Bitmap, Snappy), columnar storage, and sub-100ms queries. Built in Go, open source.",
+  keywords: [
+    "SoltixDB",
+    "time-series database",
+    "TSDB",
+    "solar energy monitoring",
+    "solar farm database",
+    "inverter monitoring",
+    "irradiance data",
+    "power metrics",
+    "pre-computed aggregation",
+    "columnar storage",
+    "adaptive compression",
+    "Gorilla compression",
+    "Delta encoding",
+    "distributed database",
+    "IoT database",
+    "Go database",
+    "open source TSDB",
+    "real-time energy analytics",
+    "sensor data",
+    "industrial monitoring",
+  ],
+  authors: [{ name: "SoltixDB Team", url: "https://github.com/soltixdb" }],
+  creator: "SoltixDB",
+  publisher: "SoltixDB",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://soltixdb.com",
+    siteName: "SoltixDB",
+    title: "SoltixDB — Time-Series Database Built for Solar Energy",
+    description:
+      "Purpose-built TSDB for solar energy monitoring with pre-computed aggregation, adaptive compression, and sub-100ms queries. Open source, built in Go.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SoltixDB — Time-Series Database Built for Solar Energy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SoltixDB — Time-Series Database Built for Solar Energy",
+    description:
+      "Purpose-built TSDB for solar energy monitoring with pre-computed aggregation, adaptive compression, and sub-100ms queries.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://soltixdb.com",
+  },
+  category: "technology",
 };
 
 // Script to set theme before paint to prevent flash
